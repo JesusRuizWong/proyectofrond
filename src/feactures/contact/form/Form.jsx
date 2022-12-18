@@ -1,4 +1,5 @@
 import { Book, BookOnlineSharp, WhatsApp } from '@mui/icons-material'
+import { Box } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './form.css'
@@ -6,11 +7,12 @@ import './form.css'
 export default function Form() {
   return (
  <section className="contact" id="contact">
-
-        <Link style={{ textDecoration: "none" }}   to={{ pathname: "https://wa.me/51962621679" }} target="_blank" >  Escribenos a WhatsApp 
+        <Box sx={{display:'flex', justifyContent:'center', textAlign:'center' , padding:'4rem' }}>
+        <Link style={{ textDecoration: "none", color:'color5' }}    to={{ pathname: "https://wa.me/51962621679" }} target="_blank" >  Escribenos a WhatsApp 
         <WhatsApp style={{ textDecoration: "none" }}  color='color5' href="https://wa.me/51962621679" />
           O dejanos un correo. ✌️
          </Link>
+         </Box>
             
             
            

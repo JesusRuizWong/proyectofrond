@@ -7,11 +7,10 @@ import Info from './info/info';
 export default function Home() { 
   return (
     <div>
-
         <Slider />
         <Info />
-        <Topcircuits />
-        <TopHotels />
+        {/* <Topcircuits />
+        <TopHotels /> */}
     </div>
   )
 }

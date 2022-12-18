@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ResponsiveAppBar from "../components/layout/menu/ResponsiveAppBar";
 import Home from "../feactures/Home/Home";
 import Circuits from "../feactures/circuits/circuits";
-import YouAreLost from "../feactures/404/YouAreLost";
 import Autos from "../feactures/autos/Autos";
 import Hotels from "../feactures/hotels/Hotels";
 import Contact from "../feactures/contact/contact";

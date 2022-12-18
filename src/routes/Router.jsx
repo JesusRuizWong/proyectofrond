@@ -21,10 +21,6 @@ const Router =()=>{
         <Route exact path="/Autos" element={<Autos />}/>
         <Route exact path="/Hoteles" element={<Hotels />}/>
         <Route exact path="/Contactanos" element={<Contact />}/>        
-        {/* <Route exact path="/about" element={<AboutPage/>}/>
-        <Route exact path="/notfound" element={<NotFoundPage/>}/>
-        <Route exact path="/login" element={<Login/>}/>
-        <Route exact path="/bannercontents" element={<BannerContents/>}/> */}
     </Routes>
     <Footer />
     </BrowserRouter>

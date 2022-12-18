@@ -14,13 +14,15 @@ const containerStyle = {
   marginInline: '3%',
 };
 
-  const SearchHotels = () => {
+  const SearchAutos = () => {
     const [ item, setItem ] = useState([])
     const [ search, setSearch ] = useState("")
     const [open, setOpen] = React.useState(false);
     const [ title, setTitle ] = useState('') ; 
     const [ subtitle, setSubTitle ] = useState('') ; 
     const [ score, setScore ] = useState('') ; 
+    const [ precio, setPrecio ] = useState('') ; 
+    const [ año, setAño ] = useState('') ;     
     const [ lat, setLat ] = useState(0) ; 
     const [ lng, setLng ] = useState(0) ; 
   
@@ -31,7 +33,9 @@ const containerStyle = {
           console.log("Document data:", docSnap.data().gps.lat);
           setTitle(docSnap.data().title)    
           setSubTitle(docSnap.data().subtitle)    
-          setScore(docSnap.data().score)  
+          setScore(docSnap.data().precio)  
+          setScore(docSnap.data().año)     
+          setScore(docSnap.data().score)            
           setLat(docSnap.data().gps.lat)    
           setLng(docSnap.data().gps.lng)   
         }
@@ -89,7 +93,7 @@ const containerStyle = {
         </Box>
 
         <Box sx={{display:'flex', justifyContent:'center',flexWrap:'wrap'}}>   
-        <Carousel  cols={2} rows={2} gap={20} loop mobileBreakpoint={390} sx={{display:'flex', justifyContent:'center'}} >
+        <Carousel  cols={3} rows={3} gap={20} loop mobileBreakpoint={390} sx={{display:'flex', justifyContent:'center'}} >
                 { results.map( (item) => (
                             <Carousel.Item   key={item.id}
                             sx={{display:'flex' ,justifyContent:'center',   borderRadius:'1rem', 
@@ -98,7 +102,7 @@ const containerStyle = {
                                <Box  component='img'
                                  id='bannerImg'
                                      sx={{ 
-                                     height:'50%' ,
+                                     height:'60%' ,
                                      objectFit:'cover',
                                      width: '100%',
                                      borderRadius:'1rem 1rem 0 0'
@@ -106,9 +110,8 @@ const containerStyle = {
                                </Box> 
                                
                                <Box >
-                                   <Typography sx={{fontWeight:'600' ,fontSize:'1.1rem', color:'color2', marginBlock:'1rem'}} >{item.title} </Typography> 
-                                   <Typography  sx={{textOverflow:'ellipsis', marginInline:'10%',width:'80%', height:'50px' ,
-                                    overflow:'hidden', whiteSpace:'pre-line'}}>{item.subtitle} </Typography><p>... </p>
+                                   <Typography sx={{fontWeight:'600' ,fontSize:'1.1rem', color:'color2', marginBlock:'1rem'}} >{item.title} | Año: {item.año} </Typography> 
+                                   <Typography >{item.subtitle} </Typography>
                                </Box>
                  
                                <Box >
@@ -172,5 +175,5 @@ const containerStyle = {
     );
   };
   
-  export default SearchHotels;
+  export default SearchAutos;
   

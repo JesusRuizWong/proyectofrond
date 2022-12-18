@@ -7,7 +7,7 @@ import { db} from '../../../../../services/firebaseConfigs/firebase'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { ApiKeyGM } from "../../../../../services/googlemapsconfig/Apikey"; 
 
-//AIzaSyDOq5PYhXTOW3WLqLHTAzNfcZpW4Oa9o_E
+
 
 
 const containerStyle = {
@@ -16,10 +16,7 @@ const containerStyle = {
   marginInline: '1rem',
 };
 
-// const center = {
-//   lat: -3.745,
-//   lng: -38.523
-// };
+
 
 const Card = ({ slides, currentSlide }) => {
   const [open, setOpen] = React.useState(false);
@@ -52,10 +49,10 @@ return(
     {slides.map((chunk, i, ) => (
       <Box style={{width:'100%'}} 
         key={chunk[0].id}
-        className={currentSlide === i ? "visible2" : "invisible2"}
+        className={currentSlide === i ? "visiblex" : "invisiblex"}
       >
         {chunk.map((slide) => (
-          <Box style={{width:'100%'}}  key={slide.id}
+          <Box style={{width:'100%'}}  className="card"  key={slide.id}
            sx={{display:'flex', justifyContent:'center'}}>
             <Box 
                sx={{  backgroundColor:'white' , borderRadius:'1rem',

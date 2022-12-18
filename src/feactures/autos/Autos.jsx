@@ -2,7 +2,7 @@ import { CarCrash, CarRental, Hotel, Search } from '@mui/icons-material'
 import { Typography,Box, Slide} from '@mui/material'
 import React from 'react'
 import Slider from './carousel/components'
-import SearchHotels from './components'
+import SearchAutos from './components'
 
 
 
@@ -33,7 +33,7 @@ export default function Autos() {
 
 
       </Box>
-      <SearchHotels />
+      <SearchAutos />
 
     </Box>
   )

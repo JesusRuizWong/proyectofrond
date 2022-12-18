@@ -5,7 +5,7 @@ import { db,storage} from '../../../../services/firebaseConfigs/firebase'
 
 
          const getItems = async () => {
-          const itemsCollection = collection(db,"circuitsBanner")
+          const itemsCollection = collection(db,"contactsBanner")
           const data = await getDocs(itemsCollection)
           const p = await data.docs.map((doc) => ({...doc.data(), id:doc.id }));
           return  p;

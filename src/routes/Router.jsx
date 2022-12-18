@@ -5,7 +5,7 @@ import Home from "../feactures/home/Home";
 import Circuits from "../feactures/circuits/Circuits";
 import Autos from "../feactures/autos/Autos";
 import Hotels from "../feactures/hotels/Hotels";
-import Contact from "../feactures/contact/contact";
+import Contact from "../feactures/contact/Contact";
 
 
 
@@ -14,7 +14,7 @@ const Router =()=>{
     <BrowserRouter>
     <ResponsiveAppBar />
     <Routes>
-        {/* <Route  path="/" element={<Home />}/> */}
+        <Route  path="/" element={<Home />}/>
         <Route exact path="/Home" element={<Home />}/>
         <Route exact path="/Circuitos" element={<Circuits />}/>
         <Route exact path="/Autos" element={<Autos />}/>

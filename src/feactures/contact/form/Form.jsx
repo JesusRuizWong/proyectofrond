@@ -8,8 +8,8 @@ export default function Form() {
   return (
  <section className="contact" id="contact">
         <Box sx={{display:'flex', justifyContent:'center', textAlign:'center' , padding:'4rem' }}>
-        <Link style={{ textDecoration: "none", color:'color5' }}    to={{ pathname: "https://wa.me/51962621679" }} target="_blank" >  Escribenos a WhatsApp 
-        <WhatsApp style={{ textDecoration: "none" }}  color='color5' href="https://wa.me/51962621679" />
+        <Link style={{ textDecoration: "none", color:'color5' , fontSize:'1rem' }}    to={{ pathname: "https://wa.me/51962621679" }} target="_blank" >  Escribenos a WhatsApp 
+        <WhatsApp style={{ textDecoration: "none" ,  fontSize:'1rem' }}  color='color5' href="https://wa.me/51962621679" />
           O dejanos un correo. ✌️
          </Link>
          </Box>

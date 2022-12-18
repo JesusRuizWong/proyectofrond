@@ -26,10 +26,11 @@ const Card = ({ slides, currentSlide }) => (
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              backgroundColor:'color1t2',
-              color:'white'
+              backgroundColor:'color4t2',
+              color:'white',
+              padding:'1rem'
              }}>
-             <Typography >{slide.title} </Typography> 
+             <Typography sx={{fontSize:'1.6rem', fontWeight:'600'}}>{slide.title} </Typography> 
              <Typography >{slide.subtitle} </Typography> 
              </Box>
           </Box>

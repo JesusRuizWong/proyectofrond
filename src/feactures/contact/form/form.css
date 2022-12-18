@@ -25,7 +25,9 @@
 }
 
 
-
+.contact {
+    margin: '2rem';
+}
 
 .contact .row{
     display: flex;

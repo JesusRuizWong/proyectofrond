@@ -6,3 +6,9 @@
   width: 100%;
 
 }
+
+/* scr0II*/
+*::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(40, 40, 40, 0.764);
+}

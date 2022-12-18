@@ -30,7 +30,7 @@ const Card = ({ slides, currentSlide }) => (
               color:'white',
               padding:'1rem'
              }}>
-             <Typography sx={{fontSize:'1.5rem', fontWeight:'600'}}>{slide.title} </Typography> 
+             <Typography sx={{fontSize:'1.6rem', fontWeight:'600'}}>{slide.title} </Typography> 
              <Typography >{slide.subtitle} </Typography> 
              </Box>
           </Box>

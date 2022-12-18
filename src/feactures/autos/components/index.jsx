@@ -111,7 +111,7 @@ const containerStyle = {
                                
                                <Box >
                                    <Typography sx={{fontWeight:'600' ,fontSize:'1.1rem', color:'color2', marginBlock:'1rem'}} >{item.title} | Año: {item.año} </Typography> 
-                                   <Typography >{item.subtitle} </Typography>
+                                   <Typography > Precio: {item.precio} | {item.subtitle} </Typography>
                                </Box>
                  
                                <Box >

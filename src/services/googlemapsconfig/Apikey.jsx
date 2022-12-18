@@ -1,0 +1,1 @@
+export const ApiKeyGM = 'AIzaSyDOq5PYhXTOW3WLqLHTAzNfcZpW4Oa9o_E'

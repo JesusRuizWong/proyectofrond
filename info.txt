@@ -1,0 +1,8 @@
+npm i react-router-dom@6.0.2
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @mui/styled-engine-sc styled-components
+npm install @fontsource/roboto
+npm install @mui/icons-material
+npm i react-scripts
+npm install firebase
+npm install --save @react-google-maps/api

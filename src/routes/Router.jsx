@@ -1,8 +1,8 @@
 import Footer from "../components/layout/footer/Footer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ResponsiveAppBar from "../components/layout/menu/ResponsiveAppBar";
-import Home from "../feactures/Home/Home";
-import Circuits from "../feactures/circuits/circuits";
+import Home from "../feactures/home/Home";
+import Circuits from "../feactures/circuits/Circuits";
 import Autos from "../feactures/autos/Autos";
 import Hotels from "../feactures/hotels/Hotels";
 import Contact from "../feactures/contact/contact";

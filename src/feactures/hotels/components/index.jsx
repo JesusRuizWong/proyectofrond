@@ -4,7 +4,9 @@ import { Box,Paper,InputBase,IconButton,Typography,Rating,Button,Dialog,DialogTi
 import {collection,getDocs,getDoc,doc,deleteDoc,addDoc, updateDoc} from 'firebase/firestore'
 import { db,storage} from '../../../services/firebaseConfigs/firebase'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { ApiKeyGM } from "../../../services/googlemapsconfig/Apikey"; 
+import { ApiKeyGM } from "../../../services/googlemapsconfig/Apikey";
+import Carousel from 'better-react-carousel'
+ 
   
 const containerStyle = {
   width: '94%',
@@ -12,7 +14,7 @@ const containerStyle = {
   marginInline: '3%',
 };
 
-  const Slider = () => {
+  const SearchHotels = () => {
     const [ item, setItem ] = useState([])
     const [ search, setSearch ] = useState("")
     const [open, setOpen] = React.useState(false);
@@ -85,40 +87,40 @@ const containerStyle = {
               </IconButton>
           </Paper>
         </Box>
-        <Box sx={{display:'flex', justifyContent:'center',flexWrap:'wrap'}} >
+
+        <Box sx={{display:'flex', justifyContent:'center',flexWrap:'wrap'}}>   
+        <Carousel  cols={2} rows={2} gap={20} loop mobileBreakpoint={390} sx={{display:'flex', justifyContent:'center'}} >
                 { results.map( (item) => (
-                            <Box style={{width:'300px'}}  key={item.id}
-                            sx={{display:'flex' ,justifyContent:'center'}}>
-                             <Box 
-                                sx={{  backgroundColor:'white' , borderRadius:'1rem',
-                                height:'420px'  ,width:"80%", margin:'0.5rem' }} >   
+                            <Carousel.Item   key={item.id}
+                            sx={{display:'flex' ,justifyContent:'center',   borderRadius:'1rem', 
+                                  }}>
+                              <Box sx={{backgroundColor:'white', paddingBottom:'5%', height:'400px' , borderRadius:'1rem'}}>
                                <Box  component='img'
                                  id='bannerImg'
                                      sx={{ 
-                                     height:'60%' ,
+                                     height:'50%' ,
                                      objectFit:'cover',
                                      width: '100%',
                                      borderRadius:'1rem 1rem 0 0'
                                      }} src={item.imgurl} alt={item.title}>
                                </Box> 
                                
-                               <Box  sx={{            }}>
-                                   <Typography sx={{fontWeight:'600' ,  fontSize:'1.1rem', color:'color3', marginBlock:'1rem'}} >{item.title} </Typography> 
+                               <Box >
+                                   <Typography sx={{fontWeight:'600' ,fontSize:'1.1rem', color:'color2', marginBlock:'1rem'}} >{item.title} </Typography> 
                                    <Typography  sx={{textOverflow:'ellipsis', marginInline:'10%',width:'80%', height:'50px' ,
-                                    overflow:'hidden', whiteSpace:'pre-line'}}>{item.subtitle} </Typography>... 
+                                    overflow:'hidden', whiteSpace:'pre-line'}}>{item.subtitle} </Typography><p>... </p>
                                </Box>
                  
-                               <Box   sx={{marginBlock:'1rem'}}>
-                                   <Button size="small" variant="outlined" sx={{marginInline:'0.5rem'}}>Consulta</Button>
+                               <Box >
+                                   {/* <Button size="small" variant="outlined" sx={{marginInline:'0.5rem'}}>Consulta</Button> */}
                                    <Button size="small" variant="outlined"  sx={{marginInline:'0.5rem'}} onClick={() =>{ handleClickOpen(item.id)}}>Ver Más</Button>
                                </Box>
-                             
-                             </Box>      
-                 
-                           </Box>           
+                              </Box>
+                           </Carousel.Item>           
                 ))}
+        </Carousel>
         </Box>
-    
+
         <LoadScript async  
                     googleMapsApiKey={ApiKeyGM}
                   >
@@ -137,10 +139,10 @@ const containerStyle = {
                   </DialogContentText>
                 </DialogContent>
 
-                <Box  sx={{marginBlock:'1rem'  }}>
+                <DialogContent  sx={{marginBlock:'1rem' , display:'flex' , justifyContent:'center' }}>
                       <Typography >Puntuación: {score} ({item.amount}) </Typography> 
-                      <Rating name="read-only" value={score} precision={0.1} readOnly />
-                </Box>
+                      <Rating name="read-only" value={parseFloat(score)} precision={0.1} readOnly />
+                </DialogContent>
                     <GoogleMap
                       mapContainerStyle={containerStyle}
                       center={ {lat: parseFloat(lat) , lng:parseFloat(lng)}}
@@ -170,5 +172,5 @@ const containerStyle = {
     );
   };
   
-  export default Slider;
+  export default SearchHotels;
   

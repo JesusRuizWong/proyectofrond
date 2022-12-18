@@ -6,3 +6,4 @@ npm install @mui/icons-material
 npm i react-scripts
 npm install firebase
 npm install --save @react-google-maps/api
+$ npm install better-react-carousel --save

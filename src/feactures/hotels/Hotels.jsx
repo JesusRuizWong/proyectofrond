@@ -1,11 +1,16 @@
 import { Hotel, Search } from '@mui/icons-material'
 import { Typography,Box, Slide} from '@mui/material'
 import React from 'react'
-import Slider from './components'
+import Slider from './carousel/components'
+import SearchHotels from './components'
+
+
 
 export default function Hotels() {
   return (
-    <Box sx={{padding:"1rem", marginBottom:'1rem'}}>
+    <Box sx={{ marginBottom:'1rem'}}>
+      <Slider />
+
       <Box sx={{padding:"2rem", marginTop:'1rem', display:'flex',flexDirection:'row-reverse' , flexWrap:'wrap', alignItems:'center', justifyContent:'center', textAlign:'center'}}>  
         <Box sx={{marginInline:'2rem' , backgroundColor:'color2t2', padding:'0.75rem', borderRadius:'1rem'}} > 
           <Hotel sx={{fontSize:'3rem',marginInline:'1rem' ,color:'color2'}} />
@@ -28,7 +33,7 @@ export default function Hotels() {
 
 
       </Box>
-      <Slider />
+      <SearchHotels />
 
     </Box>
   )

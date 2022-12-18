@@ -1,0 +1,11 @@
+.animacionScroll{
+    background-color:#34495e98   !important;
+    padding: 8px 5px;
+    transition: all 1.1s !important;
+    border-radius: 0 0 1em 1em;
+    border-bottom: 0;
+    color:rgb(255, 255, 255) !important ;
+
+  
+  }
+  

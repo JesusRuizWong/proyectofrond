@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Icon from '@mui/material/Icon';
 import {Link, NavLink } from 'react-router-dom';
+import { AirOutlined, AirplanemodeActive, AirplaneTicket, AirSharp, Flaky } from '@mui/icons-material';
+import './appbar.css'
 
 
 
@@ -48,13 +50,13 @@ function ResponsiveAppBar() {
   window.addEventListener("scroll", function(){
     const header = document.getElementById("nav");
     header.classList.toggle("animacionScroll",window.scrollY>0);
-   
+ 
 })
   return (
-    <AppBar id='nav' position="fixed" sx={{backgroundColor:'transparent', boxShadow:'none'}}>
+    <AppBar id='nav' position="fixed" style={{backgroundColor:'transparent', boxShadow:'none'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AirplanemodeActive sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -70,7 +72,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            TRAVESIA
           </Typography>
 
           <Box sx={{  flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -121,7 +123,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <AirplaneTicket sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -138,16 +140,16 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            TRAVESIA
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <NavLink style={{ textDecoration: "none" }} to={page.nombre}   key={page.id}>
-                <Button
+              <NavLink  style={{ textDecoration: "none" }} to={page.nombre}   key={page.id}>
+                <Button 
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'flex' }}
+                  sx={{ my: 2, display: 'flex' }}
                 >  
-                  <Typography      textTransform="none" mx={1} >{page.nombre}</Typography>
+                  <Typography  color= 'white'   textTransform="none" mx={1} >{page.nombre}</Typography>
                 </Button>
                 </NavLink>  
             ))}

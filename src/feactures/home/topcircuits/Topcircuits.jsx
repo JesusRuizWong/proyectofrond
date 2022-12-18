@@ -2,6 +2,7 @@ import { MapSharp,  } from '@mui/icons-material'
 import { Typography,Box } from '@mui/material'
 import React from 'react'
 import Slider from './components'
+import ilustracion from './utils/ilustracion.svg'
 
 export default function Topcircuits() {
   return (
@@ -21,8 +22,14 @@ export default function Topcircuits() {
               Maravíllate con la diversidad de nuestra riqueza natural, cultural e histórica.
           </Typography>
         </Box>
-
+        <Box  sx={{ position: 'absolute', width:'180px', height:'180px',
+              top: '48%', zIndex:'-200',
+              left: '95%', opacity:'0.5',
+              transform: 'translate(-10%, -50%)',}} component='img' src={ilustracion}>
+        </Box>
+        
       </Box>  
+
         <Slider/>
     </Box>
   )

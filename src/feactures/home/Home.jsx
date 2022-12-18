@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { mockedSlides } from './carousel/utils/mockedSlides';
 import Topcircuits from './topcircuits/topcircuits';
 import TopHotels from './tophotels/TopHotels';
+import Info from './info/info';
 
 export default function Home() { 
  console.log(mockedSlides)
@@ -13,6 +14,7 @@ export default function Home() {
     <div>
 
         <Slider />
+        <Info />
         <Topcircuits />
         <TopHotels />
     </div>

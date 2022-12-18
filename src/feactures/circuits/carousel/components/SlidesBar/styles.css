@@ -1,0 +1,29 @@
+.slideLineWrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: calc(100% - 2rem);
+    margin-top: 2rem;
+    left: 0;
+    bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .slideLine {
+    max-width: 60px;
+    width: 100%;
+    min-height: 4px;
+    margin: 0 1px;
+    border-radius: 4px;
+    background-color: #dee2e3b5;
+  }
+  
+  .chosenSlideLine {
+    max-width: 60px;
+    width: 100%;
+    min-height: 4px;
+    margin: 0 1px;
+    border-radius: 4px;
+    background-color: #9000ff;
+  }
+  

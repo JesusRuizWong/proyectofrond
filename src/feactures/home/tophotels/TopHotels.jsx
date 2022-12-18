@@ -2,6 +2,7 @@ import { Hotel } from '@mui/icons-material'
 import { Typography,Box } from '@mui/material'
 import React from 'react'
 import Slider from './components'
+import ilustracion from './utils/ilustracion.svg'
 
 export default function TopHotels() {
   return (
@@ -21,7 +22,11 @@ export default function TopHotels() {
               Maravíllate con la diversidad de alojamientos, y los mejores precios.
           </Typography>
         </Box>
-
+        <Box  sx={{ position: 'absolute', width:'180px', height:'180px',
+              top: '65%', zIndex:'-200',
+              left: '-5%', opacity:'0.5',
+              transform: 'translate(-10%, -50%)',}} component='img' src={ilustracion}>
+        </Box>
       </Box>  
         <Slider/>
     </Box>

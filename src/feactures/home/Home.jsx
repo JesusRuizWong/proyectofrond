@@ -9,8 +9,8 @@ export default function Home() {
     <div>
         <Slider />
         <Info />
-        {/* <Topcircuits />
-        <TopHotels /> */}
+        <Topcircuits />
+        <TopHotels />
     </div>
   )
 }

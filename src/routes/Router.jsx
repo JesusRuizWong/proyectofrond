@@ -14,7 +14,7 @@ const Router =()=>{
     <BrowserRouter>
     <ResponsiveAppBar />
     <Routes>
-        <Route  path="/" element={<Home />}/>
+        {/* <Route  path="/" element={<Home />}/> */}
         <Route exact path="/Home" element={<Home />}/>
         <Route exact path="/Circuitos" element={<Circuits />}/>
         <Route exact path="/Autos" element={<Autos />}/>

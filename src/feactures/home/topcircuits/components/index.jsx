@@ -18,6 +18,8 @@ import { Box } from "@mui/material";
     const slides = useMemo(() => chunk(mockedSlides, width < MOBILE_VIEW), [
       width
     ]);
+
+
   
     const nextSlide = useCallback(
       (e) => {

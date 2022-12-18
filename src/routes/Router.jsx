@@ -5,6 +5,7 @@ import Home from "../feactures/Home/Home";
 import Circuits from "../feactures/circuits/circuits";
 import YouAreLost from "../feactures/404/YouAreLost";
 import Autos from "../feactures/autos/Autos";
+import Hotels from "../feactures/hotels/Hotels";
 
 
 
@@ -17,6 +18,7 @@ const Router =()=>{
         <Route exact path="/Home" element={<Home />}/>
         <Route exact path="/Circuitos" element={<Circuits />}/>
         <Route exact path="/Autos" element={<Autos />}/>
+        <Route exact path="/Hoteles" element={<Hotels />}/>
         {/* <Route exact path="/about" element={<AboutPage/>}/>
         <Route exact path="/notfound" element={<NotFoundPage/>}/>
         <Route exact path="/login" element={<Login/>}/>
